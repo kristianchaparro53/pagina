@@ -1,0 +1,40 @@
+  <%- include ('Layouts/header.ejs') -%>
+
+
+
+  <br>
+    <div class="row">  
+        <a href="agregar" class="btn btn-primary">Agregar al inventario</a>
+    </div>
+  <br>
+  
+    
+
+<br>
+  <div class="row">
+ <% for(var i = 0; i<v.length; i++){ %>
+  <div class="card" style="width: 18rem;">
+    <img src="<%= v[i].Imagen%>" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title"><%= v[i].Titulo%></h5>
+      <a href="#" class="btn btn-primary">Comprar</a>
+
+      <p class="card-text"> JUST DO IT ...</p>
+      <p class="card-text"><%= v[i].Descrip%></p>
+      <a href="/borrar/<%= v[i].ID%>" class="btn btn-primary">Borrar</a>
+      <a href="/editar/<%= v[i].ID%>" class="btn btn-primary">Editar</a>
+     
+
+    </div>
+  </div>
+     <% } %>
+  </div>
+
+  <div class="container-sm"> 
+  
+
+  </div>
+  <%- include ('Layouts/Footer.ejs') -%>
+  
+  
+ 

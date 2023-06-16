@@ -1,0 +1,28 @@
+<%- include ('Layouts/header.ejs') -%>
+
+<% if (v) { %>
+<form action="/editar" method="POST" >
+
+    <input id="ID" name="ID" value="<%= v.ID %>" hidden>
+
+    <div class="form">
+        <h1>Editar inventario</h1>
+        <div class="grupo">
+            <input type="text" name="Titu" value="<%=v.titu %>" id="Titu"  ><span class="barra"></span>
+            <label for="">Titulo</label>
+        </div>
+        <div class="grupo">
+            <input type="text" name="Image" value="<%=v.image%>" id="Image" ><span class="barra"></span>
+            <label for="">Link de la imagen</label>
+        </div>
+        <div class="grupo">
+            <input type="text" name="Pres" id="Pres" value="<%=v.pres %>" ><span class="barra"></span>
+            <label for="">Presio</label>
+        </div>
+        
+        <button type="submit">Editar</button>
+        <p class="warnings" id="warnings"></p>
+    </div>
+</form>
+<% } %>
+<%- include ('Layouts/Footer.ejs') -%>

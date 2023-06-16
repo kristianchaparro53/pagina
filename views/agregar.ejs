@@ -1,0 +1,24 @@
+<%- include ('Layouts/header.ejs') -%>
+
+<form action="/guardar" method="POST" >
+    <div class="form">
+        <h1>Agregar al inventario</h1>
+        <div class="grupo">
+            <input type="text" name="Titu" id="Titu" ><span class="barra"></span>
+            <label for="">Titulo</label>
+        </div>
+        <div class="grupo">
+            <input type="text" name="Image" id="Image" ><span class="barra"></span>
+            <label for="">Link de la imagen</label>
+        </div>
+        <div class="grupo">
+            <input type="text" name="Pres" id="Pres" ><span class="barra"></span>
+            <label for="">Presio</label>
+        </div>
+        
+        <button type="submit">Agregar</button>
+        <p class="warnings" id="warnings"></p>
+    </div>
+</form>
+
+<%- include ('Layouts/Footer.ejs') -%>
